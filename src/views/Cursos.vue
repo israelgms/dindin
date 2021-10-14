@@ -1,16 +1,16 @@
 <template>
   <div class="cursos">
-    <h1 class="title">Cursos</h1>
-    <p class="subtitle">Educação financeira é tudo de bom</p>
+    <Header title="Cursos"/>
   </div>
 </template>
 
 <script>
+import Header from '../components/Header.vue'
 
 export default {
   name: 'Cursos',
   components: {
-
+    Header,
   }
 }
 </script>
