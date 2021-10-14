@@ -8,7 +8,7 @@
     <!-- INICIO CLASS menu -->
     <div class="menu">
       <router-link to="/">CURSOS</router-link>
-      <router-link to="/paineladm">PAINEL ADMINISTRATIVO</router-link>
+      <router-link to="/painel">PAINEL ADMINISTRATIVO</router-link>
     </div>
     <!-- FIM CLASS menu -->
   </div>
