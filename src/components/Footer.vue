@@ -29,18 +29,18 @@ export default {
     display: flex;
 }
 
-.texto, .logo {
-  margin: 53px 10px 0 0;
+.logo {
+  margin: 53px 15.43px 0 0;
 }
 
 .logo {
-    margin-left: 127px;
+    margin-left: 128px;
 }
 
 .titulo {
   font-weight: 500;
   font-size: 66px;
-  
+  margin-top: 53px;
 }
 
 .subtitulo {
