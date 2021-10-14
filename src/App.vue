@@ -29,4 +29,19 @@ export default {
   text-decoration: none;
   list-style: none;
 }
+
+.title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #FF4081;
+  margin: 81px 0 0 82px
+}
+.subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  color: #555555;
+  margin-left: 82px;
+}
+
+
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div class="painel">
-    <h1> Painel Administrativo</h1>
+    <h1 class="title">Painel Administrativo</h1>
+    <p class="subtitle">Educação financeira é tudo de bom</p>
   </div>
 </template>
 
