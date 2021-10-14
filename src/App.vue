@@ -26,5 +26,7 @@ export default {
   padding: 0;
   margin: 0;
   font-family: 'Ubuntu', sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 </style>
