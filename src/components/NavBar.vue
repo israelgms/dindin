@@ -20,7 +20,7 @@
   <!-- FIM ID nav -->
 </template>
 
-<style>
+<style scoped>
 #nav {
   background-color: #2e948a;
   height: 117px;
