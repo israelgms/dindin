@@ -28,7 +28,7 @@ export default {
   font-family: 'Ubuntu', sans-serif;
   text-decoration: none;
   list-style: none;
+  border: none;
 }
-
 
 </style>
