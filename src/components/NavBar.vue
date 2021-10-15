@@ -47,6 +47,7 @@
 
 .logo {
   display: flex;
+  cursor: pointer;
 }
 
 h2 {
