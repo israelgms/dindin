@@ -18,8 +18,13 @@ const routes = [
   {
     path: '/curso',
     name: 'Curso',
-    component: () => import(/* webpackChunkName: "painel" */ '../views/Curso.vue')
-  }
+    component: () => import(/* webpackChunkName: "curso" */ '../views/Curso.vue')
+  },
+  {
+    path: '/novocurso',
+    name: 'NovoCurso',
+    component: () => import(/* webpackChunkName: "novo curso" */ '../views/NovoCurso.vue')
+  },
 ]
 
 const router = new VueRouter({
