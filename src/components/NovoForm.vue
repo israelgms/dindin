@@ -4,7 +4,7 @@
     <!-- Ira avisar quando foi registrado com sucesso -->
     <p>Componente de mensagem</p>
     <!-- Ira avisar quando foi registrado com sucesso -->    
-    <div >
+    <div class="form-container">
         <form id="novoform-form">
             <div class="input-container">
                 <input type="text" id="titulo" titulo="titulo" v-model="titulo" placeholder="Titulo">
@@ -45,6 +45,19 @@ export default {
 
 
 <style scoped>
+
+.form-container{
+    left: 83px;
+    background-color: black;
+}
+
+input[type=text]{
+    width: 811px;
+    height: 40px;
+    background-color: #FFFFFF;
+    border: 1px solid #AEAEAE;
+    box-sizing: border-box;
+}
 
 
 </style>
