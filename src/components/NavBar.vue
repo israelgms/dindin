@@ -3,13 +3,14 @@
   <div id="nav">
     <!-- COMEÇO LINK DA CLASS logo -->
     <router-link to="/">
-    <!-- INICIO CLASS logo -->
-    <div class="logo">
+      <!-- INICIO CLASS logo -->
+      <div class="logo">
         <img src="../assets/dindin-logo.png" alt="dindin logo" />
         <h2>dindin</h2>
-    </div>
-    <!-- FIM CLASS logo -->
-    </router-link> <!-- FIM LINK DA CLASS logo -->
+      </div>
+      <!-- FIM CLASS logo -->
+    </router-link>
+    <!-- FIM LINK DA CLASS logo -->
     <!-- INICIO CLASS menu -->
     <div class="menu">
       <router-link to="/">CURSOS</router-link>
@@ -19,6 +20,12 @@
   </div>
   <!-- FIM ID nav -->
 </template>
+
+<script>
+export default {
+  name: "NavBar",
+};
+</script>
 
 <style scoped>
 #nav {
@@ -56,10 +63,23 @@ h2 {
   font-weight: 500;
   color: #ffffff;
 }
+
+@media screen and (max-width: 770px) {
+  #nav, .menu {
+    background-color: #2e948a;
+    flex-direction: column;
+  }
+  .menu {
+    margin-top: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .menu a {
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
 </style>
 
-<script>
-export default {
-  name: "NavBar",
-};
-</script>

@@ -29,6 +29,7 @@ export default {
   text-decoration: none;
   list-style: none;
   border: none;
+  box-sizing: border-box;
 }
 
 </style>
