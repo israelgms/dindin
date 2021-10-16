@@ -1,15 +1,21 @@
 <template>
-  <div>
-      <h1> Header temporário novo curso</h1>
+  <div class="titulo">
+      <NovoForm />
   </div>
 </template>
 
 <script>
-export default {
 
+import NovoForm from "../components/NovoForm.vue"
+
+export default {
+  name: "NovoCurso",
+  components: {
+    NovoForm,
+  }
 }
 </script>
 
-<style>
+<style >
 
 </style>
