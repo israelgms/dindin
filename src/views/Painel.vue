@@ -2,6 +2,7 @@
   <div class="painel">
     <Header title="Painel Administrativo"/>
     <PainelAcoes />
+
   </div>
 </template>
 

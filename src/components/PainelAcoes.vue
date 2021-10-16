@@ -1,39 +1,62 @@
 <template>
   <div>
     <div class="conteiner">
-    <table class="tabela-painel">
-      <thead class="tabela__Cabecalho">
-        <th id class="cabecalho c1" >Cursos</th>
-        <th class="cabecalho" colspan="2">Ações</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="dadoTabela-curso c1">Investimento Para iniciantes</td>
-          <td class="dadoTabela-botton">
-            <button class="botton-editar">Editar</button>
-          </td>
-          <td class="dadoTabela-botton">
-            <button class="botton-excluir">Excluir</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="tabela-painel">
+        <thead class="tabela__Cabecalho">
+          <th id class="cabecalho c1">Cursos</th>
+          <th class="cabecalho" colspan="2">Ações</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="dadoTabela-curso c1">Investimento Para iniciantes</td>
+            <td class="dadoTabela-botton">
+              <button class="botton-editar">Editar</button>
+            </td>
+            <td class="dadoTabela-botton">
+              <button class="botton-excluir">Excluir</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="dadoTabela-curso c1">Poupando e Rendendo</td>
+            <td class="dadoTabela-botton">
+              <button class="botton-editar">Editar</button>
+            </td>
+            <td class="dadoTabela-botton">
+              <button class="botton-excluir">Excluir</button>
+            </td>
+          </tr>
+          <tr>
+            <td class="dadoTabela-curso c1">Independência Financeira</td>
+            <td class="dadoTabela-botton">
+              <button class="botton-editar">Editar</button>
+            </td>
+            <td class="dadoTabela-botton">
+              <button class="botton-excluir">Excluir</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
 <script>
 export default {
   nome: "PainelAcoes",
+  data() {},
+  computed() {},
+  methods() {},
 };
 </script>
 <style scoped>
-.conteiner{
-  overflow-x: auto;
+.conteiner {
+display: flex;
+
 }
 .tabela-painel {
   margin-top: 107px;
   margin-left: 82px;
   width: 812px;
+  flex-wrap: wrap;
   /*
   position: absolute;
   width: 63px;
@@ -52,9 +75,13 @@ export default {
   font-family: Ubuntu;
   text-align: left;
 }
-.c1{
-max-width: 100px;
-background: #f8c23a;
+.c1 {
+  max-width: 100px;
+}
+button:hover {
+  background: #ebebeb;
+  border: solid 1px;
+  cursor: pointer;
 }
 .botton-editar {
   background-color: #f8c23a;
@@ -81,9 +108,13 @@ background: #f8c23a;
   margin-top: 11px;
 }
 .dadoTabela-botton {
-  text-align:left;
+  text-align: left;
   margin: 12px;
   width: 20px;
 }
-
+@media screen and (max-width: 480px) {
+  .tabela-painel{
+    margin: 15px;
+  }
+}
 </style>
