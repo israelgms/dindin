@@ -3,10 +3,12 @@
   <form action="">
     <div id="AulaForm" >
       <div class="form-container-aula">
+
         <div id="form-container-aula-numero">
           <p class="text-aula-numero">Aula 1</p>
         </div>
-        <div class="input-container-aula">
+
+         <div class="input-container-aula">
           <input
             name="text"
             type="text"
@@ -42,7 +44,7 @@
             <button @click="acrescentarAula">Acrescentar Aula</button>
           </div>
           <div id="button-salvar">
-            <button @click="salvaForm">Salvar</button>
+            <button @click="criarForm">Salvar</button>
           </div>
         </div>
         
@@ -56,7 +58,6 @@ export default {
   name: "AulaForm",
 
 };
-
 
 </script>
 
