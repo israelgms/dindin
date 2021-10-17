@@ -1,7 +1,7 @@
 <template>
   <div id="NovoForm">
-    <div>
-      <h3>Novo Curso</h3>
+    <div class="title-container">
+      <h1 class="title">{{ title }}</h1>
     </div>
     <div id="form-container">
       <form id="novoform-form">
@@ -47,7 +47,7 @@
 
         <div class="form-container-aula">
           <div id="form-container-aula-numero">
-            <p>Aula 1 (automatizar número)</p>
+            <p class="text-aula-numero">Aula 1 (automatizar número)</p>
           </div>
 
           <div class="input-container-copor">
@@ -93,6 +93,10 @@
 <script>
 export default {
   name: "NovoForm",
+
+  props: {
+    title: "",
+  },
 };
 </script>
 
@@ -104,17 +108,21 @@ export default {
   margin-left: 82px;
 }
 
-#form-container {
-  margin-top: 66px;
-}
-
 .input-container {
-  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 #form-container-aula-numero {
   margin-top: 21px;
   margin-bottom: 16px;
+}
+
+.text-aula-numero{
+  color: #419488;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
 }
 
 .input-container-copor {
@@ -125,6 +133,7 @@ export default {
   margin-top: 43px;
   margin-bottom: 163px;
 }
+
 
 #descricao {
   padding-block-end: 121px;
@@ -152,6 +161,29 @@ textarea {
 
 textarea[placeholder] {
   padding: auto;
+}
+
+input{
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #419488;
+  border-radius: 62px;
+  color: #ffffff;
+  margin-top: 53px;
+  width: 233px;
+  height: 51px;
+  cursor: pointer;
+}
+
+.title-container{
+  width: 733px;
+  height: 69px;
+}
+
+.title {
+  font-size: 29px;
+  font-weight: 700;
+  color: #ff4081;
 }
 
 /* input[placeholder="Descrição"]{

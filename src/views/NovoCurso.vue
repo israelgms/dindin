@@ -1,6 +1,6 @@
 <template>
   <div class="titulo">
-      <NovoForm />
+      <NovoForm title="Novo Curso"/>
   </div>
 </template>
 
@@ -16,6 +16,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
+
 
 </style>
