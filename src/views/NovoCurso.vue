@@ -1,17 +1,17 @@
 <template>
   <div class="titulo">
-      <NovoForm title="Novo Curso"/>
+      <HeaderForm title="Novo Curso"/>
   </div>
 </template>
 
 <script>
 
-import NovoForm from "../components/NovoForm.vue"
+import HeaderForm from "../components/HeaderForm.vue"
 
 export default {
   name: "NovoCurso",
   components: {
-    NovoForm,
+    HeaderForm,
   }
 }
 </script>

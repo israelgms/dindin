@@ -82,7 +82,7 @@
           </div>
 
           <div id="button-salvar">
-            <input type="submit" id="submit-btn" value="Salvar" />
+            <button>Salvar</button>
           </div>
         </div>
       </form>
@@ -92,12 +92,13 @@
 
 <script>
 export default {
-  name: "NovoForm",
+  name: "HeaderForm",
 
   props: {
     title: "",
   },
 };
+
 </script>
 
 
@@ -163,7 +164,7 @@ textarea[placeholder] {
   padding: auto;
 }
 
-input{
+button{
   font-size: 20px;
   font-weight: 400;
   background-color: #419488;
