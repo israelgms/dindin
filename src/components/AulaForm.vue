@@ -1,52 +1,63 @@
 <template>
-  <div id="AulaForm">
-    <div class="form-container-aula">
-      <div id="form-container-aula-numero">
-        <p class="text-aula-numero">Aula 1</p>
-      </div>
 
-      <div class="input-container-aula">
-        <textarea
-          name="text"
-          type="text"
-          id="tituloaula"
-          titulo="tituloaula"
-          v-model="tituloaula"
-          placeholder="Titulo da aula"
-        ></textarea>
-      </div>
-      <div class="input-container-aula">
-        <textarea
-          name="text"
-          type="text"
-          id="linkaula"
-          titulo="linkaula"
-          v-model="linkaula"
-          placeholder="Link da aula"
-        ></textarea>
-      </div>
-      <div class="input-container-aula">
-        <textarea
-          name="text"
-          type="text"
-          id="descricaoaula"
-          titulo="descricaoauala"
-          v-model="descricaoaula"
-          placeholder="Descriçao da aula"
-        ></textarea>
-      </div>
+  <form action="">
+    <div id="AulaForm" >
+      <div class="form-container-aula">
+        <div id="form-container-aula-numero">
+          <p class="text-aula-numero">Aula 1</p>
+        </div>
+        <div class="input-container-aula">
+          <input
+            name="text"
+            type="text"
+            id="tituloaula"
+            titulo="tituloaula"
+            v-model="tituloaula"
+            placeholder="Titulo da aula"
+          >
+        </div>
+        <div class="input-container-aula">
+          <input
+            name="text"
+            type="text"
+            id="linkaula"
+            titulo="linkaula"
+            v-model="linkaula"
+            placeholder="Link da aula"
+          >
+        </div>
+        <div class="input-container-aula">
+          <textarea
+            name="text"
+            type="text"
+            id="descricaoaula"
+            titulo="descricaoauala"
+            v-model="descricaoaula"
+            placeholder="Descriçao da aula"
+          ></textarea>
+        </div>
 
-      <div id="button-salvar">
-        <button>Salvar</button>
+        <div id="buttons">
+          <div id="button-acrescentar-aula">
+            <button @click="acrescentarAula">Acrescentar Aula</button>
+          </div>
+          <div id="button-salvar">
+            <button @click="salvaForm">Salvar</button>
+          </div>
+        </div>
+        
       </div>
     </div>
-  </div>
+  </form>
 </template>
 
 <script>
 export default {
   name: "AulaForm",
+
 };
+
+
 </script>
 
 <style scoped>
@@ -68,7 +79,7 @@ export default {
   margin-bottom: 30px;
 }
 
-textarea {
+textarea, input {
   font-size: 18px;
   font-style: normal;
   font-weight: normal;
@@ -94,8 +105,12 @@ textarea[placeholder] {
   line-height: 21px;
 }
 
-#button-salvar {
+#button-acrescentar-aula {
   margin-top: 43px;
+}
+
+#button-salvar {
+  margin-top: 15px;
   margin-bottom: 163px;
 }
 
@@ -105,7 +120,6 @@ button {
   background-color: #419488;
   border-radius: 62px;
   color: #ffffff;
-  margin-top: 53px;
   width: 233px;
   height: 51px;
   cursor: pointer;

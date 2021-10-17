@@ -5,34 +5,35 @@
     </div>
     <div id="form-container">
       <form id="novoform-form">
+
         <div class="input-container">
-          <textarea
+          <input
             name="text"
             id="titulo"
             titulo="titulo"
             v-model="titulo"
             placeholder="Titulo"
-          ></textarea>
+          >
         </div>
         <div class="input-container">
-          <textarea
+          <input
             name="text"
             type="text"
             id="uploadcapa"
             uploadcapa="uploadcapa"
             v-model="uploadcapa"
             placeholder="Upload capa"
-          ></textarea>
+          >
         </div>
         <div class="input-container">
-          <textarea
+          <input
             name="text"
             type="text"
             id="professor"
             professor="professor"
             v-model="professor"
             placeholder="Professor"
-          ></textarea>
+          >
         </div>
         <div class="input-container">
           <textarea
@@ -43,6 +44,7 @@
             v-model="descricao"
             placeholder="Descrição"
           ></textarea>
+          
         </div>
       </form>
     </div>
@@ -76,7 +78,7 @@ export default {
   height: 150px;
 }
 
-textarea {
+textarea, input{
   font-size: 18px;
   font-style: normal;
   font-weight: normal;

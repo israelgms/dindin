@@ -2,6 +2,7 @@
   <div class="titulo">
       <HeaderForm title="Novo Curso"/>
       <AulaForm />
+      
   </div>
 </template>
 
