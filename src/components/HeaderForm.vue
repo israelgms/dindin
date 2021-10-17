@@ -1,6 +1,6 @@
 <template>
-  <div id="NovoForm">
-    <div class="title-container">
+  <div id="HeaderForm">
+    <div id="title-container">
       <h1 class="title">{{ title }}</h1>
     </div>
     <div id="form-container">
@@ -44,47 +44,6 @@
             placeholder="Descrição"
           ></textarea>
         </div>
-
-        <div class="form-container-aula">
-          <div id="form-container-aula-numero">
-            <p class="text-aula-numero">Aula 1 (automatizar número)</p>
-          </div>
-
-          <div class="input-container-copor">
-            <textarea
-              name="text"
-              type="text"
-              id="tituloaula"
-              titulo="tituloaula"
-              v-model="tituloaula"
-              placeholder="Titulo da aula"
-            ></textarea>
-          </div>
-          <div class="input-container-copor">
-            <textarea
-              name="text"
-              type="text"
-              id="linkaula"
-              titulo="linkaula"
-              v-model="linkaula"
-              placeholder="Link da aula"
-            ></textarea>
-          </div>
-          <div class="input-container-copor">
-            <textarea
-              name="text"
-              type="text"
-              id="descricaoaula"
-              titulo="descricaoauala"
-              v-model="descricaoaula"
-              placeholder="Descriçao da aula"
-            ></textarea>
-          </div>
-
-          <div id="button-salvar">
-            <button>Salvar</button>
-          </div>
-        </div>
       </form>
     </div>
   </div>
@@ -98,13 +57,12 @@ export default {
     title: "",
   },
 };
-
 </script>
 
 
 
 <style scoped>
-#NovoForm {
+#HeaderForm {
   margin-top: 97px;
   margin-left: 82px;
 }
@@ -113,35 +71,7 @@ export default {
   margin-bottom: 14px;
 }
 
-#form-container-aula-numero {
-  margin-top: 21px;
-  margin-bottom: 16px;
-}
-
-.text-aula-numero{
-  color: #419488;
-  font-style: normal;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21px;
-}
-
-.input-container-copor {
-  margin-bottom: 30px;
-}
-
-#button-salvar {
-  margin-top: 43px;
-  margin-bottom: 163px;
-}
-
-
 #descricao {
-  padding-block-end: 121px;
-  height: 150px;
-}
-
-#descricaoaula {
   padding-block-end: 121px;
   height: 150px;
 }
@@ -164,19 +94,7 @@ textarea[placeholder] {
   padding: auto;
 }
 
-button{
-  font-size: 20px;
-  font-weight: 400;
-  background-color: #419488;
-  border-radius: 62px;
-  color: #ffffff;
-  margin-top: 53px;
-  width: 233px;
-  height: 51px;
-  cursor: pointer;
-}
-
-.title-container{
+#title-container {
   width: 733px;
   height: 69px;
 }
