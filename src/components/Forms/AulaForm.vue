@@ -1,14 +1,16 @@
 <template>
-
   <form action="">
-    <div id="AulaForm" >
+    <div id="AulaForm">
       <div class="form-container-aula">
-
         <div id="form-container-aula-numero">
-          <p class="text-aula-numero">Aula 1</p>
+          <p class="text-aula-numero">Aula {{ (numeroaula ) }}</p>
         </div>
 
-         <div class="input-container-aula">
+        <div id="teste">
+          
+        </div>
+
+        <div class="input-container-aula">
           <input
             name="text"
             type="text"
@@ -16,7 +18,7 @@
             titulo="tituloaula"
             v-model="tituloaula"
             placeholder="Titulo da aula"
-          >
+          />
         </div>
         <div class="input-container-aula">
           <input
@@ -26,7 +28,7 @@
             titulo="linkaula"
             v-model="linkaula"
             placeholder="Link da aula"
-          >
+          />
         </div>
         <div class="input-container-aula">
           <textarea
@@ -39,15 +41,18 @@
           ></textarea>
         </div>
 
+        <p>{{ (numeroaula - menosnumeroaula) }}</p>
+
+        <p>{{ (numeroaula - menosnumeroaula) }}</p>
+
         <div id="buttons">
           <div id="button-acrescentar-aula">
-            <button @click="acrescentarAula">Acrescentar Aula</button>
+            <button @click="acrescentarAula" type="button" >Acrescentar Aula</button>
           </div>
           <div id="button-salvar">
-            <button @click="criarForm">Salvar</button>
+            <button @click="criarForm" type="button">Salvar</button>
           </div>
         </div>
-        
       </div>
     </div>
   </form>
@@ -57,8 +62,31 @@
 export default {
   name: "AulaForm",
 
-};
+  data() {
+    return {
+      numeroaula: 1,
+      menosnumeroaula: 1,
+    };
+  },
+  methods: {
+    acrescentarAula() {
+      if (true) {
+        let numeroaula = this.numeroaula + 1; 
+        this.numeroaula = numeroaula;
+        
+      }
 
+      if (condition) {
+        let numeroaula = this.menosnumeroaula + 1; 
+        this.menosnumeroaula = numeroaula;
+      }
+
+      const res = window.document.getElementById('teste').innerHTML= numeroaula; 
+      console.log(res);
+
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -80,7 +108,8 @@ export default {
   margin-bottom: 30px;
 }
 
-textarea, input {
+textarea,
+input {
   font-size: 18px;
   font-style: normal;
   font-weight: normal;

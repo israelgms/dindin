@@ -8,8 +8,8 @@
 
 <script>
 
-import HeaderForm from "../components/HeaderForm.vue"
-import AulaForm from "../components/AulaForm.vue"
+import HeaderForm from "../components/Forms/HeaderForm.vue"
+import AulaForm from "../components/Forms/AulaForm.vue"
 
 export default {
   name: "NovoCurso",
