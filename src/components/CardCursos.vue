@@ -63,6 +63,13 @@
 <script>
 export default {
   name: "CardCursos",
+
+  data(){
+
+  },
+  methods:{
+    
+  }
 };
 </script>
 <style scoped>
