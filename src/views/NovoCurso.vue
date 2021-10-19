@@ -1,21 +1,19 @@
 <template>
   <div class="titulo">
-      <HeaderForm title="Novo Curso"/>
-      <AulaForm />
+  
+      <Form title="Novo Curso"/>
       
   </div>
 </template>
 
 <script>
 
-import HeaderForm from "../components/Forms/HeaderForm.vue"
-import AulaForm from "../components/Forms/AulaForm.vue"
+import Form from "../components/Form.vue"
 
 export default {
   name: "NovoCurso",
   components: {
-    HeaderForm,
-    AulaForm,
+    Form,
   }
 }
 </script>
