@@ -36,25 +36,27 @@
           </tr>
         </tbody>
       </table>
+    <button id="button-novo">Criar um novo curso</button>
     </div>
   </div>
 </template>
 <script>
 export default {
   nome: "PainelAcoes",
-  data() {},
-  computed() {},
-  methods() {},
+
 };
 </script>
 <style scoped>
 .conteiner {
 display: flex;
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap
 
 }
 .tabela-painel {
   margin-top: 107px;
-  margin-left: 82px;
+  /*margin-left: 82px;*/
   width: 812px;
   flex-wrap: wrap;
   /*
@@ -64,6 +66,18 @@ display: flex;
   left: 106px;
   top: 405px;
   */
+}
+#button-novo{
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #419488;
+  border-radius: 62px;
+  color: #ffffff;
+  margin-top: 53px;
+  width: 233px;
+  height: 51px;
+  cursor: pointer;
+
 }
 .tabela__Cabecalho {
   background-color: #ebebeb;
@@ -112,9 +126,23 @@ button:hover {
   margin: 12px;
   width: 20px;
 }
+
 @media screen and (max-width: 480px) {
+
   .tabela-painel{
-    margin: 15px;
+    margin: 20px;
+  }
+  #button-novo{
+    margin-bottom: 53px;
   }
 }
+@media (max-width:1045px) {
+  .tabela-painel{
+    margin: 20px;
+  }
+  #button-novo{
+    margin-bottom: 53px;
+  }
+}
+
 </style>
