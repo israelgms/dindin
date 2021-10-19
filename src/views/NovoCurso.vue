@@ -1,15 +1,26 @@
 <template>
-  <div>
-      <h1> Header temporário novo curso</h1>
+  <div class="titulo">
+      <HeaderForm title="Novo Curso"/>
+      <AulaForm />
+      
   </div>
 </template>
 
 <script>
-export default {
 
+import HeaderForm from "../components/HeaderForm.vue"
+import AulaForm from "../components/AulaForm.vue"
+
+export default {
+  name: "NovoCurso",
+  components: {
+    HeaderForm,
+    AulaForm,
+  }
 }
 </script>
 
-<style>
+<style scoped>
+
 
 </style>
