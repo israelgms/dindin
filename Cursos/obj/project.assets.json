@@ -698,11 +698,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DesafioAnimatech\\Cursos\\Cursos.csproj",
+      "projectUniqueName": "D:\\DesafioAnimatech\\dindin\\Cursos\\Cursos.csproj",
       "projectName": "Cursos",
-      "projectPath": "D:\\DesafioAnimatech\\Cursos\\Cursos.csproj",
+      "projectPath": "D:\\DesafioAnimatech\\dindin\\Cursos\\Cursos.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\DesafioAnimatech\\Cursos\\obj\\",
+      "outputPath": "D:\\DesafioAnimatech\\dindin\\Cursos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
