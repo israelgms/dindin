@@ -31,6 +31,7 @@ D:\DesafioAnimatech\Cursos\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.d
 D:\DesafioAnimatech\Cursos\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 D:\DesafioAnimatech\Cursos\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\DesafioAnimatech\Cursos\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+<<<<<<< HEAD
 D:\DesafioAnimatech\dindin\Cursos\obj\Debug\netcoreapp3.1\Cursos.csproj.AssemblyReference.cache
 D:\DesafioAnimatech\dindin\Cursos\obj\Debug\netcoreapp3.1\Cursos.GeneratedMSBuildEditorConfig.editorconfig
 D:\DesafioAnimatech\dindin\Cursos\obj\Debug\netcoreapp3.1\Cursos.AssemblyInfoInputs.cache
@@ -64,3 +65,7 @@ D:\DesafioAnimatech\dindin\Cursos\obj\Debug\netcoreapp3.1\scopedcss\bundle\Curso
 D:\DesafioAnimatech\dindin\Cursos\obj\Debug\netcoreapp3.1\Cursos.RazorTargetAssemblyInfo.cache
 D:\DesafioAnimatech\dindin\Cursos\obj\Debug\netcoreapp3.1\Cursos.csproj.CopyComplete
 D:\DesafioAnimatech\dindin\Cursos\obj\Debug\netcoreapp3.1\Cursos.genruntimeconfig.cache
+=======
+C:\Users\Admin\Documents\Projetos\dindin\Cursos\obj\Debug\netcoreapp3.1\Cursos.dll
+C:\Users\Admin\Documents\Projetos\dindin\Cursos\obj\Debug\netcoreapp3.1\Cursos.pdb
+>>>>>>> c2a7f881cb07eb99459a00a78018ae46e72d130e
