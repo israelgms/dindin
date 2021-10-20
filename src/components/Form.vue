@@ -1,52 +1,50 @@
 <template>
-  <form action="">
+  <form action="" @submit.prevent="salvar">
     <div id="HeaderForm">
-    <div id="title-container">
-      <h1 class="title">{{ title }}</h1>
+      <div id="title-container">
+        <h1 class="title">{{ title }}</h1>
+      </div>
     </div>
-  </div>
     <div id="form-container">
-      <form id="novoform-form">
-        <div class="input-container">
-          <input
-            name="text"
-            id="titulo"
-            titulo="titulo"
-            v-model="informacao_curso.titulo"
-            placeholder="Titulo"
-          />
-        </div>
-        <div class="input-container">
-          <input
-            name="text"
-            type="text"
-            id="uploadcapa"
-            uploadcapa="uploadcapa"
-            v-model="informacao_curso.upload_capa"
-            placeholder="Upload capa"
-          />
-        </div>
-        <div class="input-container">
-          <input
-            name="text"
-            type="text"
-            id="professor"
-            professor="professor"
-            v-model="informacao_curso.nome_professor"
-            placeholder="Professor"
-          />
-        </div>
-        <div class="input-container">
-          <textarea
-            name="text"
-            type="text"
-            id="descricao"
-            titulo="descricao"
-            v-model="informacao_curso.descricao_curso"
-            placeholder="Descrição"
-          ></textarea>
-        </div>
-      </form>
+      <div class="input-container">
+        <input
+          name="text"
+          id="titulo"
+          titulo="titulo"
+          v-model="informacaocurso.titulo"
+          placeholder="Titulo"
+        />
+      </div>
+      <div class="input-container">
+        <input
+          name="text"
+          type="text"
+          id="uploadcapa"
+          uploadcapa="uploadcapa"
+          v-model="informacaocurso.uploadcapa"
+          placeholder="Upload capa"
+        />
+      </div>
+      <div class="input-container">
+        <input
+          name="text"
+          type="text"
+          id="professor"
+          professor="professor"
+          v-model="informacaocurso.professor"
+          placeholder="Professor"
+        />
+      </div>
+      <div class="input-container">
+        <textarea
+          name="text"
+          type="text"
+          id="descricao"
+          titulo="descricao"
+          v-model="informacaocurso.descricao"
+          placeholder="Descrição"
+        ></textarea>
+      </div>
     </div>
 
     <div v-for="(aula, index) in listagemAulas" :key="index">
@@ -85,6 +83,11 @@
               placeholder="Descriçao da aula"
             ></textarea>
           </div>
+          <div id="button-acrescentar-aula">
+            <button @click="removerAula(index)" type="button">
+              Excluir aula
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -95,15 +98,14 @@
         </button>
       </div>
       <div id="button-salvar">
-        <button @click="salvar()" type="submit">Salvar</button>
+        <button type="submit">Salvar</button>
       </div>
     </div>
   </form>
 </template>
 
 <script>
-
-import api from '../service/api'
+import api from "../service/api";
 
 export default {
   name: "Form",
@@ -114,11 +116,11 @@ export default {
 
   data() {
     return {
-      informacao_curso: {
+      informacaocurso: {
         titulo: "",
-        upload_capa: "",
-        nome_professor: "",
-        descricao_curso: "",
+        uploadcapa: "",
+        professor: "",
+        descricao: "",
       },
       listagemAulas: [
         {
@@ -135,28 +137,25 @@ export default {
     };
   },
   methods: {
+    removerAula(index){
+				this.listagemAulas.splice(index, 1);
+    },
     acrescentarAula() {
       this.listagemAulas.push({
         titulo: "",
         link: "",
         descricao: "",
       });
-
     },
-     salvar() {
-      api.post('/curso',{
-        titulo: this.aula.titulo,
-        link: this.aula.link,
-        descricao: this.aula.descricao,
-
-        
-          
-      })
-    
+    salvar() {
+      api.post("/curso", {
+        cursoName: this.informacaocurso.titulo,
+        cursoFoto: this.informacaocurso.uploadcapa,
+        cursoDescricao: this.informacaocurso.descricao,
+        cursoProfessor: this.informacaocurso.professor
+      });
     },
-    
-  },  
-  
+  },
 };
 </script>
 
@@ -253,5 +252,4 @@ button {
   font-weight: 700;
   color: #ff4081;
 }
-
 </style>
