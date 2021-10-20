@@ -1,75 +1,36 @@
 <template>
-<div>
-    <div class="container">
-      <div class="image">
-        <img src="../assets/images/image3.png" alt="" />
-      </div>
-      <div class="conteudo">
-        <h2 class="title">Investimento para iniciantes</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt.
-        </p>
-        <button>Começar agora</button>
-      </div>
-    </div>
-
   <div>
-    <div class="container">
+    <div class="container" v-for="curso in listCursos" 
+    :key="curso.cursoId"
+    >
       <div class="image">
-        <img src="../assets/images/image2.png" alt="" />
+        <img :src= curso.cursoFoto alt="" />
       </div>
       <div class="conteudo">
-        <h2 class="title">Investimento para iniciantes</h2>
+        <h2 class="title">{{curso.cursoName}}</h2>
         <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt.
+          {{curso.cursoDescricao}}
         </p>
         <button>Começar agora</button>
       </div>
     </div>
   </div>
-
-  <div>
-    <div class="container">
-      <div class="image">
-        <img src="../assets/images/image4.png" alt="" />
-      </div>
-      <div class="conteudo">
-        <h2 class="title">Investimento para iniciantes</h2>
-        <p>
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto beatae vitae dicta
-          sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-          qui ratione voluptatem sequi nesciunt.
-        </p>
-        <button>Começar agora</button>
-      </div>
-    </div>
-  </div>
-</div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   name: "CardCursos",
-
-  data(){
-
+  mounted() {
+    this.getCursos();
   },
-  methods:{
-    
-  }
+  methods: {
+    ...mapActions("getCurso", ["getCursos"]),
+  },
+  computed: {
+    ...mapGetters("getCurso", ["listCursos"]),
+  },
 };
 </script>
 <style scoped>
@@ -104,51 +65,46 @@ button {
   cursor: pointer;
 }
 hr {
-    width: 1244px;
-    height: 5px;
-    background-color: #C4C4C4;
-    margin: 0 auto;    
+  width: 1244px;
+  height: 5px;
+  background-color: #c4c4c4;
+  margin: 0 auto;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   .container {
-  display: flex;
-  margin: 95px 50px 68px 50px;
+    display: flex;
+    margin: 95px 50px 68px 50px;
   }
 
-  .image img{
+  .image img {
     width: 320px;
     height: 320px;
   }
 
   .conteudo {
-   max-width: 100%;
+    max-width: 100%;
   }
 
   button {
     margin-top: 10px;
   }
-
 }
 
-@media screen and (max-width: 803px){
-
+@media screen and (max-width: 803px) {
   .container {
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  margin: 40px 10px 20px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin: 40px 10px 20px 10px;
   }
 
-  .conteudo{
+  .conteudo {
     margin-left: 0;
   }
 
   button {
     margin-top: 25px;
   }
-
 }
-
-
 </style>

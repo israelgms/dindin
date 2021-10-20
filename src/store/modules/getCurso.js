@@ -2,9 +2,9 @@ import serviceApi from '../../service/getCurso'
 
 export default{
     namespaced: true,
-
+    
     state:{
-        getCursos: []
+        getCursos: [],
     },
     mutations:{
         SET_CURSOS(state, payload){
@@ -15,11 +15,11 @@ export default{
         async getCursos(context){
             const res = await serviceApi.getCursos()
             context.commit('SET_CURSOS', res.data) 
-        }
+        }        
     },
     getters:{
         listCursos(state){
-            return state.getCursos 
+            return state.getCursos
         }
     }
 }

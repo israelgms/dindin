@@ -1,3 +1,7 @@
 is_global = true
 build_property.RootNamespace = Cursos
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Admin\Documents\Projetos\dindin\Cursos\
+=======
+build_property.ProjectDir = D:\DesafioAnimatech\dindin\Cursos\
+>>>>>>> e849ebf647cfb4a5f0d019bbcffa809466dbfdf6
