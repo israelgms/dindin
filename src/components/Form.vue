@@ -145,16 +145,18 @@ export default {
     },
      salvar() {
       api.post('/curso',{
-        titulo: this.titulo,
-        upload_capa: this.upload_capa,
-        nome_professor: this.nome_professor,
-        descricao_curso: this.descricao_curso,
+        titulo: this.aula.titulo,
+        link: this.aula.link,
+        descricao: this.aula.descricao,
+
         
           
       })
-
-    }
+    
+    },
+    
   },  
+  
 };
 </script>
 
