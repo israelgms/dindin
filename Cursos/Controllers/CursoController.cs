@@ -12,7 +12,6 @@ using Microsoft.AspNetCore.Hosting;
 using System.IO;
 
 
-
 namespace Curso.Controllers
 {
     [Route("api/[controller]")]
@@ -27,6 +26,7 @@ namespace Curso.Controllers
         public string cursoName { get; set; }
         public string cursoDescricao { get; set; }
         public string cursoFoto { get; set; }
+        public string cursoProfessor { get; set; }
         public string cursoId { get; set; }
 
         public CursoController(IConfiguration configuration, IWebHostEnvironment env)
@@ -45,6 +45,7 @@ namespace Curso.Controllers
 
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("CursosAppCon");
+
             SqlDataReader myReader;
             using(SqlConnection myCon=new SqlConnection(sqlDataSource))
             {
@@ -67,9 +68,8 @@ namespace Curso.Controllers
         {
             string query = @"
                             insert into dbo.cursos
-                            (cursoName, cursoDescricao, cursoFoto)
-                     values (@cursoName, @cursoDescricao, @cursoFoto)
-
+                            (cursoName, cursoDescricao, cursoFoto, cursoProfessor)
+                     values (@cursoName, @cursoDescricao, @cursoFoto, @cursoProfessor)
                             ";
 
             DataTable table = new DataTable();
@@ -83,6 +83,7 @@ namespace Curso.Controllers
                     myCommand.Parameters.AddWithValue("@cursoName", cur.cursoName);
                     myCommand.Parameters.AddWithValue("@cursoDescricao", cur.cursoDescricao);
                     myCommand.Parameters.AddWithValue("@cursoFoto", cur.cursoFoto);
+                    myCommand.Parameters.AddWithValue("@cursoProfessor", cur.cursoProfessor);
                     myReader = myCommand.ExecuteReader();
                     table.Load(myReader);
                     myReader.Close();
