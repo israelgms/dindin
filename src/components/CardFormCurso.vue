@@ -1,40 +1,51 @@
 <template>
-  <div id="Container-FormCurso">
-    <form @submit.prevent="postForms">
-      <div class="input-container">
-        <input type="text" placeholder="titulo" v-model="titulo" />
+  <div id="formcurso-container">
+    <form id="form-curso" @submit.prevent="postForms">
+      <div id="inputs-container">
+        <div class="input-container">
+          <input type="text" placeholder="titulo" v-model="titulo" />
+        </div>
+        <div class="input-container">
+          <input type="text" placeholder="uploadcapa" v-model="upload_capa" />
+        </div>
+        <div class="input-container">
+          <input type="text" placeholder="professor" v-model="professor" />
+        </div>
+        
+        <div class="input-container">
+          <textarea
+            type="text"
+            placeholder="descricao"
+            v-model="descricao"
+          ></textarea>
+        </div>
       </div>
-      <div class="input-container">
-        <input type="text" placeholder="professor" v-model="professor" />
-      </div>
-      <div class="input-container">
-        <input type="text" placeholder="descricao" v-model="descricao" />
-      </div>
-      <div class="input-container">
-        <input type="text" placeholder="teste" v-model="teste" />
-      </div>
-      <button type="submit">Salvar</button>
+      <button @click="postForms()" type="submit">Salvar</button>
     </form>
   </div>
 </template>
 
 <script>
+
 export default {
+    name: "CardFormCurso",
+
   data() {
     return {
       titulo: "",
+      upload_capa: "",
       professor: "",
       descricao: "",
-      teste: "",
+
     };
   },
   methods: {
     postForms() {
       const form = {
         titulo: this.titulo,
-        professor: this.professor,
-        descricao: this.descricao,
-        teste: this.teste,
+         upload_capa: this.upload_capa,
+        professor: this.professor,       
+        descricao: this.descricao,        
       };
       console.log(form);
     },
