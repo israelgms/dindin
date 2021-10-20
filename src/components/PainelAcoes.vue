@@ -7,26 +7,8 @@
           <th class="cabecalho" colspan="2">Ações</th>
         </thead>
         <tbody>
-          <tr>
-            <td class="dadoTabela-curso c1">Investimento Para iniciantes</td>
-            <td class="dadoTabela-botton">
-              <button class="botton-editar">Editar</button>
-            </td>
-            <td class="dadoTabela-botton">
-              <button class="botton-excluir">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="dadoTabela-curso c1">Poupando e Rendendo</td>
-            <td class="dadoTabela-botton">
-              <button class="botton-editar">Editar</button>
-            </td>
-            <td class="dadoTabela-botton">
-              <button class="botton-excluir">Excluir</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="dadoTabela-curso c1">Independência Financeira</td>
+          <tr  v-for="item in listCursos" :key="item.cursoId">
+            <td class="dadoTabela-curso c1">{{item.cursoName}}</td>
             <td class="dadoTabela-botton">
               <button class="botton-editar">Editar</button>
             </td>
@@ -40,11 +22,20 @@
   </div>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
+
 export default {
   nome: "PainelAcoes",
-  data() {},
-  computed() {},
-  methods() {},
+
+  mounted(){
+    this.getCursos()
+  },
+  methods: {
+    ...mapActions('getCurso',['getCursos'])
+  },
+  computed: {
+    ...mapGetters('getCurso',['listCursos'])
+  },
 };
 </script>
 <style scoped>

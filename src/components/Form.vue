@@ -95,13 +95,16 @@
         </button>
       </div>
       <div id="button-salvar">
-        <button @click="salvar()" type="button">Salvar</button>
+        <button @click="salvar()" type="submit">Salvar</button>
       </div>
     </div>
   </form>
 </template>
 
 <script>
+
+import api from '../service/api'
+
 export default {
   name: "Form",
 
@@ -139,13 +142,19 @@ export default {
         descricao: "",
       });
 
-      console.log(this.listagemAulas);
     },
-    salvar() {
-      console.log(this.listagemAulas);
-      console.log(this.informacao_curso);
-    },
-  },
+     salvar() {
+      api.post('/curso',{
+        titulo: this.titulo,
+        upload_capa: this.upload_capa,
+        nome_professor: this.nome_professor,
+        descricao_curso: this.descricao_curso,
+        
+          
+      })
+
+    }
+  },  
 };
 </script>
 

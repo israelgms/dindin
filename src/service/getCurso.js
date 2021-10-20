@@ -1,7 +1,7 @@
 import api from './api'
 
 export default{
-    async getCurso(){
+    async getCursos(){
         try {
             const res = await api.get('/curso')
             return res
