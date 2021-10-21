@@ -1,24 +1,16 @@
 <template>
-  <!-- INICIO ID nav -->
   <div id="nav">
-    <!-- COMEÇO LINK DA CLASS logo -->
     <router-link to="/">
-      <!-- INICIO CLASS logo -->
       <div class="logo">
         <img src="../assets/dindin-logo.png" alt="dindin logo" />
         <h2>dindin</h2>
       </div>
-      <!-- FIM CLASS logo -->
     </router-link>
-    <!-- FIM LINK DA CLASS logo -->
-    <!-- INICIO CLASS menu -->
     <div class="menu">
       <router-link to="/">CURSOS</router-link>
       <router-link to="/painel">PAINEL ADMINISTRATIVO</router-link>
     </div>
-    <!-- FIM CLASS menu -->
   </div>
-  <!-- FIM ID nav -->
 </template>
 
 <script>
