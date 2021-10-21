@@ -1,5 +1,6 @@
 <template>
-  <form action="form" @submit.prevent="salvar">
+  <div id="container-form">
+  <form class="form" action="form" @submit.prevent="salvar">
     <div id="HeaderForm">
       <div id="title-container">
         <h1 class="title">{{ title }}</h1>
@@ -48,7 +49,7 @@
     </div>
 
     <div v-for="(aula, index) in listagemAulas" :key="index">
-      <div id="AulaForm">
+      <div class="AulaForm">
         <div class="form-container-aula">
           <div id="form-container-aula-numero">
             <p class="text-aula-numero">Aula {{ index + 1 }}</p>
@@ -83,8 +84,8 @@
               placeholder="Descriçao da aula"
             ></textarea>
           </div>
-          <div id="button-acrescentar-aula">
-            <button @click="removerAula(index)" type="button">
+          <div id="button-removeraula">
+            <button @click="removerAula(index)" type="button" class="button-removeraula">
               Excluir aula
             </button>
           </div>
@@ -102,6 +103,7 @@
       </div>
     </div>
   </form>
+  </div>
 </template>
 
 <script>
@@ -142,12 +144,14 @@ export default {
     },
     
     acrescentarAula() {
-      if (this.listagemAulas.length < 2) {
+      if (this.listagemAulas.length < 2) { // LIMITANTE QUANTIDADE DE ACRESCIMO DE CARDS DE AULA //
         this.listagemAulas.push({
         titulo: "",
         link: "",
         descricao: "",
       });
+      } else {
+        
       }
       
     },
@@ -164,13 +168,22 @@ export default {
         AulaDoisLink: this.listagemAulas.link,
         DescricaoAulaDois: this.listagemAulas.descricao, 
       });
+
     },
+
+    
+    // colocar uma mensagem de sistema
+
+    // limpar os campos
+
+        
+
   },
 };
 </script>
 
 <style scoped>
-#AulaForm {
+.AulaForm {
   margin-left: 82px;
 }
 
@@ -193,6 +206,7 @@ export default {
   padding-block-end: 121px;
   height: 150px;
 }
+
 
 .input-container {
   margin-bottom: 14px;
@@ -251,6 +265,10 @@ button {
   margin-left: 82px;
 }
 
+.button-removeraula{
+    margin-left: 0;
+  }
+
 #title-container {
   width: 733px;
   height: 69px;
@@ -262,4 +280,32 @@ button {
   font-weight: 700;
   color: #ff4081;
 }
+
+
+
+@media screen and (max-width: 1075px) {
+  input,textarea {
+    width: 340px;
+  }
+
+}
+
+@media screen and (max-width: 800px) { 
+
+  input,textarea {
+    width: 280px;
+  }
+
+  .button-removeraula{
+    margin-left: 0;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  input,textarea {
+    width: 260px;
+  }
+}
+
 </style>
