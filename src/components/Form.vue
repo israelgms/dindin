@@ -1,5 +1,5 @@
 <template>
-  <form action="" @submit.prevent="salvar">
+  <form action="form" @submit.prevent="salvar">
     <div id="HeaderForm">
       <div id="title-container">
         <h1 class="title">{{ title }}</h1>
@@ -20,7 +20,7 @@
           name="text"
           type="text"
           id="uploadcapa"
-          uploadcapa="uploadcapa"
+          titulo="uploadcapa"
           v-model="informacaocurso.uploadcapa"
           placeholder="Upload capa"
         />
@@ -140,19 +140,29 @@ export default {
     removerAula(index){
 				this.listagemAulas.splice(index, 1);
     },
+    
     acrescentarAula() {
-      this.listagemAulas.push({
+      if (this.listagemAulas.length < 2) {
+        this.listagemAulas.push({
         titulo: "",
         link: "",
         descricao: "",
       });
+      }
+      
     },
     salvar() {
       api.post("/curso", {
-        cursoName: this.informacaocurso.titulo,
-        cursoFoto: this.informacaocurso.uploadcapa,
-        cursoDescricao: this.informacaocurso.descricao,
-        cursoProfessor: this.informacaocurso.professor
+        CursoName: this.informacaocurso.titulo,
+        CursoImagem: this.informacaocurso.uploadcapa,
+        CursoDescricao: this.informacaocurso.descricao,
+        CursoProfessor: this.informacaocurso.professor,
+        AulaUmTitulo: this.listagemAulas.aula, 
+        AulaUmLink: this.listagemAulas.link,
+        DescricaoAulaUm: this.listagemAulas.descricao, 
+        AulaDoisTitulo: this.listagemAulas.aula,
+        AulaDoisLink: this.listagemAulas.link,
+        DescricaoAulaDois: this.listagemAulas.descricao, 
       });
     },
   },
