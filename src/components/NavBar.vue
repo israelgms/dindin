@@ -56,6 +56,44 @@ h2 {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1024px) {
+  #nav, .menu {
+    background-color: #2e948a;
+    flex-direction: column;
+    width: 500px;
+  }
+  .menu {
+    margin-top: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .menu a {
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #nav, .menu {
+    background-color: #2e948a;
+    flex-direction: column;
+    width: 440px;
+  }
+  .menu {
+    margin-top: 0;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .menu a {
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
 @media screen and (max-width: 770px) {
   #nav, .menu {
     background-color: #2e948a;
@@ -73,5 +111,7 @@ h2 {
     margin-bottom: 10px;
   }
 }
+
+
 </style>
 
