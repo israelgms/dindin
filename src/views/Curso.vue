@@ -3,52 +3,41 @@
     <div class="container">
       <div class="curso">
         <div class="conteudo">
-          <h1>Investimento para iniciantes</h1>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+          <h1>{{listCursos.CursoTitulo}}</h1>
+          <p>{{listCursos.CursoDescricao}}</p>
         </div>
         <div class="image">
           <img src="../assets/images/image3.png" alt="">
         </div>
       </div>
-
+      <div>
       <div class="aula">
         <div class="video">
-          <iframe width="462" height="261" src="https://www.youtube.com/embed/l-aS0XSmShM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="462" height="261" :src="AulaUmLink" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div>
-          <h2>Aula 1</h2>
-          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-
-Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+          <h2>{{listCursos.AulaUmTitulo}}</h2>
+          <p>{{listCursos.DescricaoAulaUm}}</p>
         </div>
       </div>
       <hr>
-
-      <div class="aula">
-        <div class="video">
-          <iframe width="462" height="261" src="https://www.youtube.com/embed/l-aS0XSmShM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div>
-          <h2>Aula 1</h2>
-          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-
-Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
-        </div>
       </div>
-      <hr>
-
-    </div>
-
-    
-
-
-
+  </div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
-
+  mounted(){
+    this.getCursos()
+  },
+  methods: {
+    ...mapActions('getCurso',['getCursos'])
+  },
+  computed: {
+    ...mapGetters('getCurso',['listCursos'])
+  },
 }
 </script>
 
