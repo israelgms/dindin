@@ -15,8 +15,8 @@ namespace Dados.Models
         public string cursoName { get; set; }
 
         public string cursoDescricao { get; set; }
-
         public string cursoFoto { get; set; }
+        public string cursoProfessor { get; set; }
 
     }
 }
