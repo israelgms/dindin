@@ -46,6 +46,7 @@ display: flex;
 .tabela-painel {
   margin-top: 107px;
   margin-left: 82px;
+  margin-bottom: 90px;
   width: 812px;
   flex-wrap: wrap;
   /*
