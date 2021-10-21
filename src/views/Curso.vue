@@ -62,6 +62,7 @@ export default {
 
   .image img {
     margin: 81px 0 81px 88px;
+    padding-right: 35px;
   }
 
   .aula {
@@ -74,6 +75,7 @@ export default {
     margin-left: 76px;
     font-size: 20px;
     font-weight: 300;
+    padding-right: 35px;
   }
 
   iframe {
@@ -89,8 +91,53 @@ export default {
 
   hr {
     margin: 0 auto;
-    width: 1244px;
+    max-width: 1244px;
+    width: 100%;
     height: 3px;
     background-color: #C4C4C4;
   }
+
+  @media screen and (max-width: 1075px){
+    h1, .conteudo p, iframe {
+      margin-left: 10px;
+    } 
+    .image img, .aula p, h2 {
+      margin-left: 25px;
+    }
+    iframe {
+      margin-right: 10px;
+    }
+  }
+  @media screen and (max-width: 800px){
+    .curso, .aula {
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+    }
+    h1, .aula p, .conteudo p {
+      max-width: 500px;
+    }
+    h2 {
+      margin-top: 5px;
+    }
+    .image img {  
+      width: 100%;
+    }
+    iframe {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  @media screen and (max-width: 500px){
+    .image img { 
+      max-width: 300px;
+    }
+    iframe {
+      width: 280px;
+      height: auto;
+    }
+  }
+
+
+
 </style>
