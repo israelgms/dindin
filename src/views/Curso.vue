@@ -24,6 +24,19 @@ Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conse
       </div>
       <hr>
 
+      <div class="aula">
+        <div class="video">
+          <iframe width="462" height="261" src="https://www.youtube.com/embed/l-aS0XSmShM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+          <h2>Aula 1</h2>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+
+Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+        </div>
+      </div>
+      <hr>
+
     </div>
 
     
@@ -116,6 +129,9 @@ export default {
     }
     h1, .aula p, .conteudo p {
       max-width: 500px;
+    }
+    hr {
+      margin-top: 15px;
     }
     h2 {
       margin-top: 5px;
