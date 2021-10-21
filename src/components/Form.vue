@@ -18,10 +18,10 @@
       <div class="input-container">
         <input
           name="text"
-          type="file"
+          type="text"
           id="uploadcapa"
-          accept="image/*"
-          @change="uploadcapa($event)"
+          titulo="uploadcapa"
+          v-model="informacaocurso.uploadcapa"
           placeholder="Upload capa"
         />
       </div>
@@ -116,9 +116,6 @@ export default {
 
   data() {
     return {
-      
-      file: '',
-
       informacaocurso: {
         titulo: "",
         uploadcapa: "",
@@ -145,7 +142,7 @@ export default {
     },
     
     acrescentarAula() {
-      if (this.listagemAulas.length < 3) {
+      if (this.listagemAulas.length < 2) {
         this.listagemAulas.push({
         titulo: "",
         link: "",
