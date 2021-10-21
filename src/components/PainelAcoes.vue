@@ -7,7 +7,7 @@
           <th class="cabecalho" colspan="2">Ações</th>
         </thead>
         <tbody>
-          <tr>
+          <tr class="row">
             <td class="dadoTabela-curso c1">Investimento Para iniciantes</td>
             <td class="dadoTabela-botton">
               <button class="botton-editar">Editar</button>
@@ -16,21 +16,21 @@
               <button class="botton-excluir">Excluir</button>
             </td>
           </tr>
-          <tr>
+          <tr class="row">
             <td class="dadoTabela-curso c1">Poupando e Rendendo</td>
-            <td class="dadoTabela-botton">
+            <td class="dadoTabela-botton c2">
               <button class="botton-editar">Editar</button>
             </td>
-            <td class="dadoTabela-botton">
+            <td class="dadoTabela-botton c3">
               <button class="botton-excluir">Excluir</button>
             </td>
           </tr>
-          <tr>
+          <tr class="row">
             <td class="dadoTabela-curso c1">Independência Financeira</td>
-            <td class="dadoTabela-botton">
+            <td class="dadoTabela-botton c2">
               <button class="botton-editar">Editar</button>
             </td>
-            <td class="dadoTabela-botton">
+            <td class="dadoTabela-botton c3">
               <button class="botton-excluir">Excluir</button>
             </td>
           </tr>
@@ -59,6 +59,9 @@ flex-wrap: wrap
   /*margin-left: 82px;*/
   width: 812px;
   flex-wrap: wrap;
+  border: 1px solid #EBEBEB;
+  border-collapse: collapse;
+
   /*
   position: absolute;
   width: 63px;
@@ -109,6 +112,7 @@ button:hover {
   margin-bottom: 11px;
   margin-top: 11px;
 }
+
 .botton-excluir {
   background-color: #f8513a;
   width: 87px;
@@ -125,6 +129,7 @@ button:hover {
   text-align: left;
   margin: 12px;
   width: 20px;
+  
 }
 
 @media screen and (max-width: 480px) {
@@ -134,6 +139,17 @@ button:hover {
   }
   #button-novo{
     margin-bottom: 53px;
+  }
+}
+@media (max-width:1045px) {
+  .tabela-painel{
+    margin: 20px;
+  }
+  #button-novo{
+    margin-bottom: 53px;
+  }
+}
+=======
   }
 }
 @media (max-width:1045px) {

@@ -1,6 +1,0 @@
-D:\DesafioAnimatech\Cursos\obj\Debug\netcoreapp3.1\CursoFaculdade.csproj.AssemblyReference.cache
-D:\DesafioAnimatech\Cursos\obj\Debug\netcoreapp3.1\CursoFaculdade.GeneratedMSBuildEditorConfig.editorconfig
-D:\DesafioAnimatech\Cursos\obj\Debug\netcoreapp3.1\CursoFaculdade.AssemblyInfoInputs.cache
-D:\DesafioAnimatech\Cursos\obj\Debug\netcoreapp3.1\CursoFaculdade.AssemblyInfo.cs
-D:\DesafioAnimatech\Cursos\obj\Debug\netcoreapp3.1\CursoFaculdade.csproj.CoreCompileInputs.cache
-D:\DesafioAnimatech\Cursos\obj\Debug\netcoreapp3.1\CursoFaculdade.MvcApplicationPartsAssemblyInfo.cache
