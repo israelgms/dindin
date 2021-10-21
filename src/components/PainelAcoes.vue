@@ -149,5 +149,16 @@ button:hover {
     margin-bottom: 53px;
   }
 }
+=======
+  }
+}
+@media (max-width:1045px) {
+  .tabela-painel{
+    margin: 20px;
+  }
+  #button-novo{
+    margin-bottom: 53px;
+  }
+}
 
 </style>
